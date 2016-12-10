@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700" rel="stylesheet">
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <nav class= "be-red white large-padding">
+        <ul class="no-list row center-xs middle-xs">
+          <list class="col-md">
+            <h1 class="no" id="Logo">Logo</h1>
+          </list>
+          <list class="col-md">
+            <%= link_to "Inicio",root_path %>
+          </list>
+          <list class="col-md">
+            Hola
+          </list>
+          <list class="col-md">
+            Contacto
+          </list>
+        </ul> 
+      </nav>
+    </header>
+
+    <%= yield %>
+  </body>
+</html>
