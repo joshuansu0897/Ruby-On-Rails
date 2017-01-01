@@ -1,0 +1,16 @@
+<%= form_for(@article) do |f|%>
+    <div class="field">
+        <%= f.text_field :title, placeholder: "Titulo", class:"form-control"%>
+    </div>
+    <div class="field">
+       <%= f.text_area :body, placeholder: "Escribe la informacion del articulo", style: "height:100px;", class:"form-control"%>
+    </div>
+    <div class="field">
+        <%= f.submit "Publiar", class:"btn be-azul white"%>
+    </div>
+    <% @article.errors.full_messages.each do |error| %>
+        <div class="be-azul white field">
+            - <%= error %>
+        </div>
+    <%end%>
+<%end%>
