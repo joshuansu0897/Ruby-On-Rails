@@ -38,13 +38,17 @@ a,a:visited{
     text-decoration: none;
 }
 
-.field{
+.field,.actions{
     margin-top: 1em; 
 }
 
 .cuidado{
     text-decoration: true;
     color: #D70000 !important;
+}
+
+.text-left{
+    text-align: left;
 }
 
 .form-control{
