@@ -1,6 +1,21 @@
 <div class="centrar">
     <h1><%= @article.title %></h1>
 
+    <% unless @article.user.nil? %>
+        <p>
+            Escrito por: <%= @article.user.email %>
+        </p>
+        <p>
+            Visitas: <%= @article.visits_count %>
+        </p>
+    <%else%>
+        <p>
+            Escrito por: Anonimo
+        </p>
+        <p>
+            Visitas: <%= @article.visits_count %>
+        </p>
+    <%end%>
     <div>
         <%= @article.body %>
     </div>
