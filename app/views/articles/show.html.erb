@@ -22,4 +22,19 @@
     <div>
         <%= link_to "Editar", edit_article_path(@article), class: "cuidado"%>
     </div>
+    <div class="field">
+        <h3>Deja tu Comentarios</h3>
+        <%= render "comments/form" %>
+    </div>
+
+    <div class="field">
+        <h3>Comentarios</h3>
+        <ul>
+            <% @article.comments.each do |com|%>
+                <li>
+                    <%= com.body %> - <%= com.user.email %>
+                </li>
+            <%end%>
+        </ul>
+    </div>
 </div>
