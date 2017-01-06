@@ -23,11 +23,10 @@
  -->
 
   <div class="field">
-    <%= f.label :body %>
-    <%= f.text_area :body %>
+    <%= f.text_area :body,placeholder: "Escribe tu comentario" ,class:"form-control" %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :Publicar, class:"btn be-azul white" %>
   </div>
 <% end %>

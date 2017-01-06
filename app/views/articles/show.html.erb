@@ -1,22 +1,26 @@
 <div class="centrar">
-    <h1><%= @article.title %></h1>
+    <h1 class="titulos"><%= @article.title %></h1>
 
     <% unless @article.user.nil? %>
-        <p>
-            Escrito por: <%= @article.user.email %>
-        </p>
-        <p>
-            Visitas: <%= @article.visits_count %>
-        </p>
+        <div class="datos-usuarios">
+            <p>
+                Escrito por: <%= @article.user.email %>
+            </p>
+            <p>
+                Visitas: <%= @article.visits_count %>
+            </p>
+        </div>    
     <%else%>
-        <p>
-            Escrito por: Anonimo
-        </p>
-        <p>
-            Visitas: <%= @article.visits_count %>
-        </p>
+        <div class="datos-usuarios">
+            <p>
+                Escrito por: Anonimo
+            </p>
+            <p>
+                Visitas: <%= @article.visits_count %>
+            </p>
+        </div> 
     <%end%>
-    <div>
+    <div class="texto-articulo">
         <%= @article.body %>
     </div>
     <div>
