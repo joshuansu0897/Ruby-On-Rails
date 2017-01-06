@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 #GEMAS Que yo puse
 gem 'devise'
 gem 'jquery-turbolinks'
+gem "paperclip", "~> 5.0.0"
 #Gemas que yo puse
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
