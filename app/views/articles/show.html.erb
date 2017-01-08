@@ -1,6 +1,8 @@
 <div class="centrar">
     <h1 class="titulos"><%= @article.title %></h1>
-
+    <div class="field centrar">
+        <%= image_tag @article.cover.url(:thumb) %>
+    </div>
     <% unless @article.user.nil? %>
         <div class="datos-usuarios">
             <p>
