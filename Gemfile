@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'devise'
 gem 'jquery-turbolinks'
 gem "paperclip", "~> 5.0.0"
+gem 'bcrypt-ruby', '3.1.1.rc1', :require => 'bcrypt'
 #Gemas que yo puse
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
