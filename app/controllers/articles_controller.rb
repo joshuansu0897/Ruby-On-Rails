@@ -14,10 +14,12 @@ class ArticlesController < ApplicationController
 
   def new
     @article = Article.new
+    @categories = Category.all
   end
 
   def create
     @article = current_user.articles.new(article_params)
+    @article.categories = params[:categories]
     if@article.save
       redirect_to @article
     else
@@ -46,12 +48,8 @@ class ArticlesController < ApplicationController
   def set_article
     @article = Article.find(params[:id])
   end
-
-  def validate_user
-    redirect_to new_user_session_path, notice: "Necesitas iniciar secion"
-  end  
-
+  
   def article_params
-    params.require(:article).permit(:title,:body,:cover)
+    params.require(:article).permit(:title,:body,:cover,:categories)
   end  
 end

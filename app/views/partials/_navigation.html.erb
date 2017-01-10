@@ -2,17 +2,18 @@
     <nav class= "be-azul white large-padding">
         <ul class="no-list row center-xs middle-xs">
           <list class="col-md">
-            <h1 class="no" id="Logo">Logo</h1>
+            <h1 class="no" id="Logo"><%= link_to "Logo",root_path %></h1>
           </list>
           <list class="col-md">
-            <%= link_to "Inicio",root_path %>
+            <%= link_to "Articulos", articles_path %>
           </list>
-          <list class="col-md">
-            Hola
-          </list>
-          <list class="col-md">
-            Contacto
-          </list>
+
+          <% @categories.each do |cat|%>
+            <list class="col-md">
+              <%= link_to cat.name, cat %>
+            </list>
+          <%end%>
+          
           <% if user_signed_in? %>
             <list class="col-md">
               <%= link_to "Cerrar secion", destroy_user_session_path, method: :delete %>

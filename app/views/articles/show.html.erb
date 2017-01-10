@@ -28,6 +28,12 @@
     <div>
         <%= link_to "Editar", edit_article_path(@article), class: "cuidado"%>
     </div>
+    <div class="filed">
+        <h3>Categoria</h3>
+        <% @article.categories.each do |cat|%>
+            <%= link_to cat.name, cat, style:"color:#{cat.color}"%>
+        <%end%>
+    </div>
     <div class="field">
         <h3>Deja tu Comentarios</h3>
         <%= render "comments/form" %>
