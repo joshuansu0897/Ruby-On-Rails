@@ -1,0 +1,52 @@
+<div class="centrar">
+    <h1 class="titulos"><%= @article.title %></h1>
+    <div class="field centrar">
+        <%= image_tag @article.cover.url(:thumb) %>
+    </div>
+    <% unless @article.user.nil? %>
+        <div class="datos-usuarios">
+            <p>
+                Escrito por: <%= @article.user.email %>
+            </p>
+            <p>
+                Visitas: <%= @article.visits_count %>
+            </p>
+        </div>    
+    <%else%>
+        <div class="datos-usuarios">
+            <p>
+                Escrito por: Anonimo
+            </p>
+            <p>
+                Visitas: <%= @article.visits_count %>
+            </p>
+        </div> 
+    <%end%>
+    <div class="texto-articulo">
+        <%= @article.body %>
+    </div>
+    <div>
+        <%= link_to "Editar", edit_article_path(@article), class: "cuidado"%>
+    </div>
+    <div class="filed">
+        <h3>Categoria</h3>
+        <% @article.categories.each do |cat|%>
+            <%= link_to cat.name, cat, style:"color:#{cat.color}"%>
+        <%end%>
+    </div>
+    <div class="field">
+        <h3>Deja tu Comentarios</h3>
+        <%= render "comments/form" %>
+    </div>
+
+    <div class="field">
+        <h3>Comentarios</h3>
+        <ul>
+            <% @article.comments.each do |com|%>
+                <li>
+                    <%= com.body %> - <%= com.user.email %>
+                </li>
+            <%end%>
+        </ul>
+    </div>
+</div>

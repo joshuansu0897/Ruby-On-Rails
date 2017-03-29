@@ -1,0 +1,82 @@
+html,body{
+    margin: 0px; 
+    font-family: 'Nunito Sans', sans-serif;   
+}
+
+.btn{
+    background-color: inherit;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    padding: 10px 12px;
+    cursor: pointer;    
+}
+
+.be-azul{
+    background-color: #15057A
+}
+
+.white{
+    color: #E5E5E5;
+}
+
+#Logo{
+    font-size: 1.3em;
+}
+
+.no{
+    margin: 0px;
+}
+
+.large-padding{
+    padding: 5px 5px;
+}
+
+a,a:visited{
+    color: inherit;
+    text-decoration: none;
+}
+
+.field,.actions{
+    margin-top: 1em; 
+}
+
+.titulos{
+   text-transform: uppercase;
+   text-align: center; 
+}
+
+.datos-usuarios{
+    text-align: right;
+}
+
+.texto-articulo{
+    text-align: justify;
+    font-size: 18px;
+}
+
+.cuidado{
+    text-decoration: true;
+    color: #D70000 !important;
+}
+
+.text-left{
+    text-align: left;
+}
+
+.form-control{
+    border: none;
+    border-bottom: 1px solid;
+    outline: none;
+    width: 100%;
+    display: block;
+    padding: 10px 0px;
+    font-size: 1.2em;
+}
+
+.centrar{
+    width: 80%;
+    margin: 0 auto;
+
+}
